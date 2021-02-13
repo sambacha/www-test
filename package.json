@@ -1,0 +1,18 @@
+{
+  "name": "www-test",
+  "version": "0.1.0",
+  "description": "www page test suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio wdio.conf.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@wdio/cli": "^7.0.3",
+    "webdriverio": "^7.0.3"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
