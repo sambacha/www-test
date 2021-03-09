@@ -1,6 +1,12 @@
 # www-test
 
 
+```bash
+wget https://raw.githubusercontent.com/sambacha/www-test/master/.scss-lint.yml
+wget https://raw.githubusercontent.com/sambacha/www-test/master/.stylelint.config.js
+wget https://raw.githubusercontent.com/sambacha/www-test/master/.stylelintrc
+```
+
 ```liquid
 {% raw %}{% include list.liquid all=true %}{% endraw %}
 ```
