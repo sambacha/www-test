@@ -1,0 +1,23 @@
+{
+  "name": "www-browserslist-config",
+  "description": "browserslist config",
+  "version": "10.6.0",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sambacha/www-test",
+    "directory": "packages/browserslist-config"
+  },
+  "bugs": "https://github.com/sambacaha/www-test/issues",
+  "keywords": [
+    "eyeglass-module",
+    "elements",
+    "carbon",
+    "components",
+    "react"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
