@@ -8,10 +8,6 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "@wdio/cli": "^7.0.3",
-    "webdriverio": "^7.0.3"
-  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }
