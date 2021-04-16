@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "description": "www page test suite",
   "main": "index.js",
+  "files": [
+    "packages/**/*"
+  ],
   "scripts": {
     "test": "wdio wdio.conf.js"
   },
-  "author": "",
+  "author": "sam bacha <sam@freighttrust.com>",
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "@wdio/cli": "^7.4.6",
+    "lerna": "^3.22.1",
+    "webdriverio": "^7.4.6"
   }
 }
