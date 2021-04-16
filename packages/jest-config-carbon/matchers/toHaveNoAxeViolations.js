@@ -53,7 +53,7 @@ function toHaveNoAxeViolations(node, options = {}) {
         resolve({
           pass: true,
         });
-      }
+      },
     );
   });
 }
@@ -63,7 +63,7 @@ function formatOutput(violations) {
   const { description, id, impact, help, helpUrl } = firstViolation;
   const nodes = firstViolation.nodes.map((node) => {
     return ['Node:', node.html, '\n', ...node.failureSummary.split('\n')].join(
-      '\n'
+      '\n',
     );
   });
   const divider = '='.repeat(80);

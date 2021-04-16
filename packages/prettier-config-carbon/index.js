@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 'use strict';
@@ -13,5 +13,5 @@ module.exports = {
   tabWidth: '2',
   useTabs: false,
   bracketSpacing: true,
-  endOfLine: 'lf'
+  endOfLine: 'lf',
 };

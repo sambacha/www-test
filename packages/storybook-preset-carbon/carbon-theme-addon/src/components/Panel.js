@@ -44,7 +44,7 @@ export const CarbonThemePanel = ({ api, active }) => {
       setCurrentTheme(value);
       api.getChannel().emit(CARBON_CURRENT_THEME, value);
     },
-    [api]
+    [api],
   );
   return (
     active && (
@@ -54,7 +54,8 @@ export const CarbonThemePanel = ({ api, active }) => {
             name="carbon-theme"
             value={currentTheme}
             onChange={handleChange}
-            size="flex">
+            size="flex"
+          >
             <option key="white" value="white">
               white
             </option>
@@ -101,7 +102,7 @@ export const CarbonTypePanel = ({ api, active }) => {
       });
       api.getChannel().emit(CARBON_TYPE_TOKEN, { tokenName, tokenValue });
     },
-    [api]
+    [api],
   );
   return (
     active && (
@@ -112,7 +113,8 @@ export const CarbonTypePanel = ({ api, active }) => {
               name={tokenName}
               onChange={handleTokenChange}
               size="flex"
-              value={currentTypeTokens[tokenName]}>
+              value={currentTypeTokens[tokenName]}
+            >
               {typeTokenPairings.map((tokenValue) => {
                 const [fontSize, lineHeight] = tokenValue.split('-');
                 return (

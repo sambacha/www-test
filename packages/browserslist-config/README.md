@@ -1,6 +1,6 @@
-#  www-browserslist-config
+# www-browserslist-config
 
->  www-browserslist-config
+> www-browserslist-config
 
 ## Getting started
 

@@ -38,7 +38,7 @@ expect.extend({
 // Inspired by the following setup from facebook/react
 // https://github.com/facebook/react/blob/6250462bed19c9f18a8cf3c2b5fcaf9aba1df72b/scripts/jest/setupTests.js#L69
 const consoleMethods = ['error', 'warn', process.env.CI && 'log'].filter(
-  Boolean
+  Boolean,
 );
 
 for (const methodName of consoleMethods) {
@@ -78,10 +78,10 @@ function formatConsoleCallStack(unexpectedConsoleCallStacks, methodName) {
       `${stack
         .split('\n')
         .map((line) => chalk.gray(line))
-        .join('\n')}`
+        .join('\n')}`,
   );
   const message = `Expected test not to call ${chalk.bold(
-    `console.${methodName}()`
+    `console.${methodName}()`,
   )}`;
 
   throw new Error(`${message}\n\n${messages.join('\n\n')}`);

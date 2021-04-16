@@ -22,7 +22,7 @@ module.exports = {
     '^.+\\.(js|jsx)$': require.resolve('./transform/jsTransform.js'),
     '^.+\\.css$': require.resolve('./transform/cssTransform.js'),
     '^(?!.*\\.(js|jsx|css|json)$)': require.resolve(
-      './transform/fileTransform.js'
+      './transform/fileTransform.js',
     ),
   },
   testRunner: 'jest-circus/runner',

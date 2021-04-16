@@ -123,7 +123,7 @@ module.exports = {
       config.plugins.push(
         new MiniCssExtractPlugin({
           filename: '[name].[contenthash].css',
-        })
+        }),
       );
     }
 
