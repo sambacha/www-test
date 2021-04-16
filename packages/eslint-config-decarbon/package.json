@@ -1,15 +1,14 @@
 {
-  "name": "eslint-config-carbon",
+  "name": "eslint-config-decarbon",
   "description": "ESLint configuration for Carbon",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/carbon-design-system/carbon.git",
-    "directory": "config/eslint-config-carbon"
+    "url": "https://github.com/sambacha/www-test.git",
+    "directory": "config/eslint-config-decarbon"
   },
-  "bugs": "https://github.com/carbon-design-system/carbon/issues",
   "files": [
     "plugins",
     "base.js",
@@ -45,5 +44,6 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1"
-  }
+  },
+  "gitHead": "dee98983266ea0f71f7ea85bbfb7c6c3cde5e119"
 }
