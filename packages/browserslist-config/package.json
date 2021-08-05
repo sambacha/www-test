@@ -1,7 +1,7 @@
 {
-  "name": "www-browserslist-config",
+  "name": "web3-browserslist-config",
   "description": "browserslist config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "Apache-2.0",
   "main": "index.js",
   "repository": {
