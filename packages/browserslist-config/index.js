@@ -1,26 +1,26 @@
 /**
-* @file web3-browserslist-config
-* @version 0.1.3
-* @license Apache-2.0/MIT
-*/
+ * @file web3-browserslist-config
+ * @version 0.1.3
+ * @license Apache-2.0/MIT
+ */
 
 'use strict';
 
 module.exports = {
-  'production': [
+  production: [
     '>0.3%',
     'not dead',
     'not op_mini all',
     'not IE > 0',
     'not samsung 4',
-    'not and_uc 12.12"
-],
-  "development": [
+    'not and_uc 12.12',
+  ],
+  development: [
     'last 1 chrome version',
     'last 1 firefox version',
     'last 1 edge version',
-];
-  
+  ],
+};
 /** @usage */
 /**  ['>0.3%', 'not dead', 'not op_mini all', 'not IE > 0'];
 npx browserslist ">0.3%, not dead, not op_mini all, not IE > 0"

@@ -1,7 +1,7 @@
 /**
-* @file test browserslists
-* @usage `npx jest -u`
-*/ 
+ * @file test browserslists
+ * @usage `npx jest -u`
+ */
 
 'use strict';
 
@@ -17,7 +17,9 @@ it('should export an array', () => {
 });
 
 it('should not contain invalid queries', () => {
-  jest.doMock('web3-browserslist-config', () => require('../index'), { virtual: true });
+  jest.doMock('web3-browserslist-config', () => require('../index'), {
+    virtual: true,
+  });
 
   const result = browserslist(['extends web3-browserslist-config']);
   expect(result).toBeTruthy();

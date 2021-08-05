@@ -1,7 +1,7 @@
-/** 
-* @file configuration test
-* @version 0.1.3
-*/
+/**
+ * @file configuration test
+ * @version 0.1.3
+ */
 
 'use strict';
 
@@ -11,15 +11,18 @@ beforeEach(() => {
   jest.resetModules();
 });
 
-it('should export an array', () => {
-  const config = require('../index');
-  expect(Array.isArray(config)).toBe(true);
+// test that production and development are both there
+it('should not export an array', () => {
+  const config = require('./index');
+  expect(Array.isArray(config)).toBe(false);
 });
 
 it('should not contain invalid queries', () => {
-  jest.doMock('web3-browserslist-config', () => require('../index'), { virtual: true });
+  jest.doMock('browserslist-config-web3', () => require('../index'), {
+    virtual: true,
+  });
 
-  const result = browserslist(['extends web3-browserslist-config']);
+  const result = browserslist(['extends browserslist-config-web3']);
   expect(result).toBeTruthy();
 });
 /** @exports browserslists testing harness */

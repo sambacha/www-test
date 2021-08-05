@@ -1,0 +1,14 @@
+*.html
+*.css
+*.scss
+*.jpeg
+*.svg
+*.png
+*.xml
+*.xhml
+*.htm
+*.jsonc
+*.log
+*.min.js
+dist/*
+build/*
