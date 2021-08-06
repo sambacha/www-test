@@ -21,7 +21,7 @@
     "prettier": "^2.1.0"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "2.3.2"
   },
   "gitHead": "dee98983266ea0f71f7ea85bbfb7c6c3cde5e119"
 }
