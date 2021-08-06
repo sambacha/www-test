@@ -27,7 +27,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "eslint": "^6.0.0"
+    "eslint": "^6.0.0 || ^7.0.0"
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
