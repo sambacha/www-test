@@ -45,6 +45,6 @@
     "babel-loader": "^8.2.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "webpack": "^4.41.5"
+    "webpack": "5.50.0"
   }
 }
