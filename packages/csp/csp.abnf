@@ -1,0 +1,55 @@
+
+optional-ascii-whitespace = *( %x09 / %x0A / %x0C / %x0D / %x20 )
+required-ascii-whitespace = 1*( %x09 / %x0A / %x0C / %x0D / %x20 )
+
+
+serialized-policy =
+    serialized-directive *( optional-ascii-whitespace ";" [ optional-ascii-whitespace serializ
+    
+    
+    
+serialized-policy-list = 1#serialized-policy
+                    ; The '#' rule is the one defined in section 7 of RFC 7230
+                    ; but it incorporates the modifications specified
+                    ; in section 2.1 of this document.
+
+
+serialized-directive = directive-name [ required-ascii-whitespace directive-value ]
+directive-name       = 1*( ALPHA / DIGIT / "-" )
+directive-value      = *( required-ascii-whitespace / ( %x21-%x2B / %x2D-%x3A / %x3C-%x7E ) )
+                       ; Directive values may contain whitespace and VCHAR characters,
+                       ; excluding ";" and ",". The second half of the definition
+                       ; above represents all VCHAR characters (%x21-%x7E)
+                       ; without ";" and "," (%x3B and %x2C respectively)
+
+serialized-source-list = ( source-expression *( required-ascii-whitespace source-expression ) ) / "'none'"
+source-expression      = scheme-source / host-source / keyword-source
+                         / nonce-source / hash-source
+
+; Schemes: "https:" / "custom-scheme:" / "another.custom-scheme:"
+scheme-source = scheme-part ":"
+
+; Hosts: "example.com" / "*.example.com" / "https://*.example.com:12/path/to/file.js"
+host-source = [ scheme-part "://" ] host-part [ ":" port-part ] [ path-part ]
+scheme-part = scheme
+              ; scheme is defined in section 3.1 of RFC 3986.
+host-part   = "*" / [ "*." ] 1*host-char *( "." 1*host-char )
+host-char   = ALPHA / DIGIT / "-"
+port-part   = 1*DIGIT / "*"
+path-part   = path-absolute (but not including ";" or ",")
+              ; path-absolute is defined in section 3.3 of RFC 3986.
+
+; Keywords:
+keyword-source = "'self'" / "'unsafe-inline'" / "'unsafe-eval'"
+                 / "'strict-dynamic'" / "'unsafe-hashes'" /
+                 / "'report-sample'" / "'unsafe-allow-redirects'"
+
+
+
+; Nonces: 'nonce-[nonce goes here]'
+nonce-source  = "'nonce-" base64-value "'"
+base64-value  = 1*( ALPHA / DIGIT / "+" / "/" / "-" / "_" )*2( "=" )
+
+; Digests: 'sha256-[digest goes here]'
+hash-source    = "'" hash-algorithm "-" base64-value "'"
+hash-algorithm = "sha256" / "sha384" / "sha512"
