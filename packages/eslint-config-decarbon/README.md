@@ -1,11 +1,15 @@
-# eslint-config-carbon
+# eslint-config-decarbon
 
-> ESLint configuration for Carbon
+> ESLint configuration
 
 ## Getting started
 
 To install `eslint-config-carbon` in your project, you will need to run the
 following command using [npm](https://www.npmjs.com/):
+
+```shell
+yarn add -D @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint@^7.32.0 || ^8.2.0 eslint-plugin-import@^2.25.2 @typescript-eslint/parser@latest
+```
 
 ```bash
 npm install -S eslint-config-carbon
